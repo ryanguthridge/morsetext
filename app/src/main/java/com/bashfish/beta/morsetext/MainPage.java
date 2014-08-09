@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainPage extends Activity {
@@ -102,6 +103,10 @@ public class MainPage extends Activity {
         morseString += lastMorseCode;
 
         Log.d("Morse Code", morseString);
+
+        TextView morseCodeTextDisplay = (TextView)findViewById(R.id.morseTextDisplay);
+        morseCodeTextDisplay.append(lastMorseCode);
+
 
         return morseString;
     }
